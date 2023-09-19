@@ -46,6 +46,7 @@ suite('The SmokeTest userstory', function (): void {
 		test('Check a project folder has been created', async function (): Promise<void> {
 			const projectName: string = FACTORY_TEST_CONSTANTS.TS_SELENIUM_PROJECT_NAME || StringUtil.getProjectNameFromGitUrl(factoryUrl);
 			projectSection = (await new SideBarView().getContent().getSections())[0]; // get the (WORKSPACE) section from the sidebar - contains project content
+			expect(false).to.be.true;
 			expect(await projectSection.findItem(projectName)).not.eqls(undefined);
 		});
 		test('Check the project files was imported', async function (): Promise<void> {
